@@ -4,7 +4,7 @@ var request = require('request');
 var progress = require('request-progress');
 require('shelljs/global');
 
-function executeIsAvrOn{			
+function executeIsAvrOn(){			
 		return executeCmd("system-power:query | egrep 'standby|on' -o", false) == "on";
 	}
 
