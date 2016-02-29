@@ -45,7 +45,7 @@ module.exports = {
 	},
 	isAvrOn: function(){
 				
-		return executeCmd("system-power:query | egrep 'standby|on' -o", false);
+		return executeCmd("system-power:query | egrep 'standby|on' -o", false) == "on";
 		/* return new Promise(function(resolve, reject) {
                 io.socket.post('command_finished', function (data){
                     return resolve(data =="on");
