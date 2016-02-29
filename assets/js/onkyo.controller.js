@@ -12,7 +12,7 @@
 		var vm = this;
 
 		/* Functions */
-		vm.download = download;
+		vm.send = send;
 		
 		/* datas */
 		vm.conf = [];
