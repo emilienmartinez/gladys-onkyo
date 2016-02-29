@@ -42,9 +42,11 @@
 		
 		function waitForEvents(){			
 				
-			onkyoService.onFinish(function(changes){
+			onkyoService.onFinish(function(changes){				
 				console.log(changes);
+				$scope.$apply(function () {
 				vm.result = changes;
+				});
 			});
 		}
 		
