@@ -16,7 +16,7 @@
 
       function send(command) {
             return new Promise(function(resolve, reject) {
-                io.socket.post('/onkyo/send', {command : command}, function (data, jwres){
+                io.socket.post('/onkyo/send', {cmd : command}, function (data, jwres){
                     return resolve(data);
                 });
             });
