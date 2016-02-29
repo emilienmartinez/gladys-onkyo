@@ -4,6 +4,6 @@
  */
 
 module.exports.policies = {
-	DownloaderController: ['checkToken', 'Human']
+	OnkyoController: ['checkToken', 'Human']
 };
 
