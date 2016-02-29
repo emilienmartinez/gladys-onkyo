@@ -43,14 +43,30 @@ module.exports = {
 				
 		executeCmd(cmd, true);
 	},
-	isAvrOn: function(){
-				
+	startAvr:function(){
+		if(!isAvrOn())
+		{			
+		  executeCmd("system-power=on", false);
+		}
+			
+	},
+
+	startAvr:function(){
+		if(isAvrOn())
+		{			
+		  executeCmd("system-power=standby", false);
+		}
+			
+	},
+	
+	
+	isAvrOn: function(){			
 		return executeCmd("system-power:query | egrep 'standby|on' -o", false) == "on";
-		/* return new Promise(function(resolve, reject) {
-                io.socket.post('command_finished', function (data){
-                    return resolve(data =="on");
-                });
-            });		*/
-	}
+	},
+	
+	getCurrentInput(){		
+		return executeCmd("SLIQSTN | sed -n 2p", false);
+	},
+
 		
 };
