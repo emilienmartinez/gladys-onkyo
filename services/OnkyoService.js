@@ -4,6 +4,10 @@ var request = require('request');
 var progress = require('request-progress');
 require('shelljs/global');
 
+function executeIsAvrOn{			
+		return executeCmd("system-power:query | egrep 'standby|on' -o", false) == "on";
+	}
+
 function executeCmd(cmd, isAsync){
 	
 	sails.log.info('starting cmd execution');
@@ -44,7 +48,7 @@ module.exports = {
 		executeCmd(cmd, true);
 	},
 	startAvr:function(){
-		if(!isAvrOn())
+		if(!executeIsAvrOn())
 		{			
 		  executeCmd("system-power=on", false);
 		}
@@ -52,7 +56,7 @@ module.exports = {
 	},
 
 	stopAvr:function(){
-		if(isAvrOn())
+		if(executeIsAvrOn())
 		{			
 		  executeCmd("system-power=standby", false);
 		}
