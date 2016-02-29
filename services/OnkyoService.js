@@ -22,7 +22,7 @@ function executeCmd(cmd, isAsync){
 	{
 		ps.stdout.on('data', function(data) {
 				// send desktop notification (with websockets)
-					SocketService.sendDesktopMessageUser(userId, 'command_finished' , data, function(err, nbOfMsgSent){
+					SocketService.sendDesktopMessageUser(1, 'command_finished' , data, function(err, nbOfMsgSent){
 					 if(err) {
 						 sails.log.warn(err);
 					 }
@@ -43,9 +43,9 @@ module.exports = {
 	 * @url: The URL of the file to download
 	 * @user: The User id
 	 */
-	send: function(cmd, userId){
+	send: function(cmd, isAsync){
 				
-		executeCmd(cmd, true);
+		executeCmd(cmd, isAsync);
 	},
 	startAvr:function(){
 		if(!executeIsAvrOn())

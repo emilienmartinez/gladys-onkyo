@@ -19,7 +19,7 @@ module.exports = {
 	send:function(req,res){
 		var cmd = req.param('cmd');
 
-		OnkyoService.send(cmd, req.session.User.id);
+		OnkyoService.send(cmd, true);
 		
 		return res.json({
 			message: 'Command started',
