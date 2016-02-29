@@ -22,7 +22,7 @@
             });
         }            
         function onFinish(cb){
-          io.socket.on('onkyo_command_finished', function (data) {
+          io.socket.on('command_finished', function (data) {
                cb(data);
            });
         }

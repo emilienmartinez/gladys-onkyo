@@ -14,7 +14,11 @@ function executeCmd(cmd, userId){
 	var ps = exec(cmd, {async:true});
 	sails.log.info('cmd executed');
 	ps.stdout.on('data', function(data) {
-	  ScenarioService.launcher('onkyo_command_finished', cmd);
+			// send desktop notification (with websockets)
+				SocketService.sendDesktopMessageUser(userId, 'command_finished' , data, function(err, nbOfMsgSent){
+				 if(err) {
+					 sails.log.warn(err);
+				 }
 	});
 	
 }
