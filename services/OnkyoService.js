@@ -51,7 +51,7 @@ module.exports = {
 			
 	},
 
-	startAvr:function(){
+	stopAvr:function(){
 		if(isAvrOn())
 		{			
 		  executeCmd("system-power=standby", false);
