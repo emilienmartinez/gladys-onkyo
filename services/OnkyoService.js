@@ -15,7 +15,7 @@ function executeCmd(cmd, isAsync){
 	ScenarioService.launcher('onkyo_command_start', cmd);
 	
 	
-	var ps = exec("onkyo "+cmd, {isAsync});
+	var ps = exec("onkyo "+cmd,  {async:isAsync});
 	sails.log.info('cmd executed');
 	
 	if(isAsync)
