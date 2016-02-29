@@ -7,7 +7,7 @@ module.exports = {
 	
 	
 	index: function(req, res){
-		Onkyo.find({finished:false}, function(err, downloads){
+		Onkyo.find({limit:10}, function(err, downloads){
 			if(err){
 				res.status(500).json(err);
 			}else{
