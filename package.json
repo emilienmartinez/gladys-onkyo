@@ -1,0 +1,14 @@
+{
+  "name": "Gladys-Onkyo",
+  "version": "0.1.0",
+  "description": "Control Onkyo AVR in Gladys",
+  "keywords": [],
+  "dependencies": {
+    "request": "^2.65.0",
+    "request-progress": "^0.3.1",
+    "sails-util-mvcsloader": "~0.3.0",
+	"shelljs":"^0.6.0"
+  },
+  "author": "Emilien Martinez",
+  "license": "Creative Commons 3.0 France"
+}

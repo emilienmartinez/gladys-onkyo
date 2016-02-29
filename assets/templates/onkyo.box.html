@@ -1,0 +1,30 @@
+<div class="callout callout-danger ng-cloak" ng-show="vm.error">
+                    <h4>Error</h4>
+                    <p>{{vm.error}}</p>
+</div>
+<table class="table table-bordered">
+	<tbody>
+		<tr>
+			<th>Nom</th>
+			<th>Ip</th>
+		</tr>
+		<tr ng-repeat="cfg in vm.conf" class="ng-cloak">
+			<td class="download-name">{{cfg.name}}</td>
+			<td>{{cfg.ip}}
+				
+				
+			</td>
+		</tr>
+	<tr>
+		<td>
+			<input type="text" class="form-control" ng-model="vm.cmd" id="urlToDownload" placeholder="Command">
+		</td> 
+		<td>
+			<button ng-click="vm.send(vm.cmd)" class="btn btn-success btn-sm">Envoyer</button>
+		</td>
+	</tr>
+	<tr>
+	<td colspan="2">{{vm.result}}</td>
+	</tr>
+	</tbody>
+</table>
