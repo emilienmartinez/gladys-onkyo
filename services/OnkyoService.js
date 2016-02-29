@@ -19,6 +19,7 @@ function executeCmd(cmd, userId){
 				 if(err) {
 					 sails.log.warn(err);
 				 }
+				});
 	});
 	
 }
