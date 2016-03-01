@@ -20,7 +20,7 @@ function executeCmd(cmd, isAsync){
 	//Playing sound on Pi hdmi output to avoid delay
 	if(sails.config.onkyo.isHdmiInput && sails.config.onkyo.hdmiInputCode == cmd)
 	{
-		exec("aplay -c2 -r48000 -fS16_LE < /dev/zero &",  {async:false});
+		exec("aplay -c2 -r48000 -fS16_LE < /dev/zero &",  {async:true});
 	}
 	
 	if(isAsync)
