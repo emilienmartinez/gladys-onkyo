@@ -17,9 +17,9 @@ easy_install onkyo-eiscp
 $ npm install
 
 # Set the configuration informations
-avrIp -> Ip of Avr
-isHdmiInput -> raspberry pi connected through Hdmi to AVR
-hdmiInputCode -> input where raspberry is connected
+# avrIp -> Ip of Avr
+# isHdmiInput -> raspberry pi connected through Hdmi to AVR
+# hdmiInputCode -> input where raspberry is connected
 
 $ nano lib/defaults.js
 
