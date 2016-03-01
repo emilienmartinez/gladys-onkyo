@@ -10,13 +10,18 @@ function executeIsAvrOn(){
 
 function executeCmd(cmd, isAsync){
 	
-	sails.log.info('starting cmd execution');
 	// emit an event
 	ScenarioService.launcher('onkyo_command_start', cmd);
 	
 	
-	var ps = exec("onkyo "+cmd,  {async:isAsync});
-	sails.log.info('cmd executed');
+	var ps = exec("onkyo --host "+sails.config.onkyo.avrIp +" "+cmd,  {async:isAsync});
+	sails.log.info('Onkyo cmd executed');
+	
+	//Playing sound on Pi hdmi output to avoid delay
+	if(sails.config.onkyo.isHdmiInput && sails.config.onkyo.hdmiInputCode == cmd)
+	{
+		exec("aplay -c2 -r48000 -fS16_LE < /dev/zero &");
+	}
 	
 	if(isAsync)
 	{
