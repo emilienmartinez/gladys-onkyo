@@ -10,8 +10,8 @@ $ cd gladys/api/hooks
 $ git clone https://github.com/emilienmartinez/gladys-onkyo.git onkyo
 $ cd onkyo
 
-# Install python onkyo-eiscp
-easy_install onkyo-eiscp
+# Install python onkyo-eiscp (https://github.com/miracle2k/onkyo-eiscp)
+$ easy_install onkyo-eiscp
 
 # Install NPM dependencies
 $ npm install
