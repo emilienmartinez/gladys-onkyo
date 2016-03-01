@@ -32,4 +32,4 @@ $ sudo pm2 restart gladys
 * startAvr  Power on AVR
 * stopAvr  Power off AVR
 * isAvrOn  Get power status of AVR
-* getCurrentInput  Get the select input of AVR
+* getCurrentInput  Get the selected input of AVR
