@@ -28,8 +28,8 @@ $ sudo pm2 restart gladys
 ```
 
 ##Scenario actions
-* send  send given command
-* startAvr  Power on AVR
-* stopAvr  Power off AVR
-* isAvrOn  Get power status of AVR
-* getCurrentInput  Get the selected input of AVR
+* send - Send given command
+* startAvr - Power on AVR
+* stopAvr - Power off AVR
+* isAvrOn - Get power status of AVR
+* getCurrentInput - Get the selected input of AVR
