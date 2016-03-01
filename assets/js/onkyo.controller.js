@@ -22,7 +22,6 @@
 
 		function activate() {
 			waitForEvents();
-			getConfiguration();
 		}
 
 		function send(command) {
