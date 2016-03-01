@@ -32,13 +32,7 @@
 				});
 		}
 		
-		function getConfiguration(){
-			onkyoService
-				.getConfiguration()
-				.then(function(data){
-					vm.conf = data.data;
-				});
-		}
+
 		
 		function waitForEvents(){			
 				
