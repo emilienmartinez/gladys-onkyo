@@ -43,24 +43,15 @@ function executeCmd(cmd, isAsync){
 
 module.exports = {
 	
-	send: function(cmd, isAsync){
-				
+	send: function(cmd, isAsync){				
 		executeCmd(cmd, isAsync);
 	},
-	startAvr:function(){
-		if(!executeIsAvrOn())
-		{			
+	startAvr:function(){	
 		  executeCmd("system-power=on", false);
-		}
-			
 	},
 
-	stopAvr:function(){
-		if(executeIsAvrOn())
-		{			
-		  executeCmd("system-power=standby", false);
-		}
-			
+	stopAvr:function(){	
+		  executeCmd("system-power=standby", false);		
 	},
 	
 	
