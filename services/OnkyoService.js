@@ -20,7 +20,7 @@ function executeCmd(cmd, isAsync){
 	//Playing sound on Pi hdmi output to avoid delay
 	if(sails.config.onkyo.isHdmiInput && sails.config.onkyo.hdmiInputCode == cmd)
 	{
-		exec("aplay -c2 -r48000 -fS16_LE < /dev/zero &",  {async:true});
+		var soundExec = exec("aplay -N -c2 -d30 -q -r48000 -fS16_LE < /dev/zero &",  {async:true});		
 	}
 	
 	if(isAsync)
@@ -43,11 +43,6 @@ function executeCmd(cmd, isAsync){
 
 module.exports = {
 	
-	/**
-	 * Download a file for a specific user
-	 * @url: The URL of the file to download
-	 * @user: The User id
-	 */
 	send: function(cmd, isAsync){
 				
 		executeCmd(cmd, isAsync);
